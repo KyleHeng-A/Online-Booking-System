@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>User Management</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="admin.css" />
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header class="topbar">
+    <h1>User Management</h1>
+    <p class="subtitle">View, edit, filter & manage all system users</p>
+  </header>
+
+  <div class="content">
+
+    <!-- Global message -->
+    <div id="global-message" class="alert" aria-live="polite"></div>
+
+    <section class="panel">
+      <h2>All Users</h2>
+
+      <!-- Filters -->
+      <div class="toolbar">
+        <input id="user-search" placeholder="Search user..." />
+
+        <select id="filter-role">
+          <option value="">All Roles</option>
+          <option value="Student">Student</option>
+          <option value="Staff">Staff</option>
+          <option value="Admin">Admin</option>
+        </select>
+
+        <select id="filter-status">
+          <option value="">All Status</option>
+          <option value="active">Active</option>
+          <option value="inactive">Inactive</option>
+        </select>
+      </div>
+
+      <!-- User Table -->
+      <table>
+        <thead>
+          <tr>
+            <th data-sort="name">Name</th>
+            <th data-sort="email">Email</th>
+            <th data-sort="role">Role</th>
+            <th data-sort="status">Status</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+
+        <tbody id="user-table-body"></tbody>
+      </table>
+    </section>
+
+    <a href="index.html" class="btn-primary" style="background:#6b7280;">⬅ Back to Dashboard</a>
+
+  </div>
+
+  <script src="admin.js"></script>
+
+</body>
+</html>
