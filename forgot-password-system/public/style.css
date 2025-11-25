@@ -1,0 +1,64 @@
+:root{
+  --bg:#f7f7fb;
+  --card:#ffffff;
+  --text:#111;
+  --muted:#6b7280;
+  --primary:#2563eb;
+  --danger:#dc2626;
+  --success:#16a34a;
+  --border:#e5e7eb;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
+  background:var(--bg);
+  color:var(--text);
+  display:flex;align-items:center;justify-content:center;
+}
+
+.container{
+  width:92%;
+  max-width:420px;
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:14px;
+  box-shadow:0 10px 30px rgba(0,0,0,.06);
+  padding:24px;
+}
+
+h1{font-size:22px;margin:0 0 6px}
+p.subtitle{margin:0 0 16px;color:var(--muted);font-size:14px}
+
+.form-row{margin-top:12px}
+label{display:block;font-size:14px;margin-bottom:6px}
+input[type="email"], input[type="password"], input[type="text"]{
+  width:100%;padding:10px 12px;border:1px solid var(--border);border-radius:10px;font-size:14px;
+}
+.help{font-size:12px;color:var(--muted);margin-top:6px}
+.error{font-size:12px;color:var(--danger);margin-top:6px}
+.success{font-size:12px;color:var(--success);margin-top:6px}
+
+.btn{
+  width:100%;margin-top:16px;padding:12px 14px;border:0;border-radius:10px;
+  background:var(--primary);color:#fff;font-weight:600;cursor:pointer;font-size:14px;
+}
+.btn:disabled{opacity:.6;cursor:not-allowed}
+
+.row-inline{display:flex;gap:8px;align-items:center}
+.input-with-toggle{position:relative}
+.toggle-eye{
+  position:absolute;right:10px;top:50%;transform:translateY(-50%);
+  font-size:12px;color:var(--muted);cursor:not-allowed; /* 先不实现功能，禁用状态 */
+}
+
+.hr{height:1px;background:var(--border);margin:16px 0}
+a.link{display:inline-block;margin-top:12px;text-decoration:none;color:var(--primary);font-size:14px}
+
+.footer-note{margin-top:12px;font-size:12px;color:var(--muted)}
+
+@media (max-width:480px){
+  .container{padding:18px;border-radius:12px}
+}
