@@ -1,0 +1,54 @@
+{
+    "facilities": [
+        {
+            "id": "MR-A",
+            "type": "meeting_room",
+            "name": "Meeting Room A",
+            "location": "Building 1, Level 2"
+        },
+        {
+            "id": "MR-B",
+            "type": "meeting_room",
+            "name": "Meeting Room B",
+            "location": "Building 1, Level 3"
+        },
+        {
+            "id": "SS-Quiet",
+            "type": "study_space",
+            "name": "Quiet Study Zone",
+            "location": "Library East, Level 1"
+        },
+        {
+            "id": "SS-Collab",
+            "type": "study_space",
+            "name": "Collaborative Booth 3",
+            "location": "Library West, Level 2"
+        },
+        {
+            "id": "SP-Court-1",
+            "type": "sports_facility",
+            "name": "Indoor Court 1",
+            "location": "Sports Hall A"
+        },
+        {
+            "id": "SP-Pitch-2",
+            "type": "sports_facility",
+            "name": "Outdoor Pitch 2",
+            "location": "Athletics Grounds"
+        }
+    ],
+    "slotsTemplate": [
+        "08:00",
+        "09:00",
+        "10:00",
+        "11:00",
+        "12:00",
+        "13:00",
+        "14:00",
+        "15:00",
+        "16:00",
+        "17:00",
+        "18:00",
+        "19:00"
+    ]
+}
