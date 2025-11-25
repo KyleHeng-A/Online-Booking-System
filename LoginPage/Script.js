@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const emailVal = emailInput.value.trim();
     const passwordVal = passwordInput.value.trim();
 
+    // Validate email format
     const validEmail = /^.+@(tus\.ie|student\.tus\.ie)$/i.test(emailVal);
     if (!validEmail) {
       emailError.textContent = 'Email must end with @tus.ie or @student.tus.ie';
@@ -19,6 +20,7 @@ document.addEventListener('DOMContentLoaded', function () {
       emailError.textContent = '';
     }
 
+    // Validate password
     if (!passwordVal) {
       alert('Password cannot be empty');
       return;
@@ -34,8 +36,14 @@ document.addEventListener('DOMContentLoaded', function () {
       if (response.ok) {
         const result = await response.text();
         alert(result);
+
         if (result.includes('successful')) {
-          window.location.href = '../Student Dashboard/StudentDashboard.html';
+          // ✅ Check email domain and redirect accordingly
+          if (emailVal.endsWith('@student.tus.ie')) {
+            window.location.href = '../Student Dashboard/StudentDashboard.html';
+          } else if (emailVal.endsWith('@tus.ie')) {
+            window.location.href = '../Admin-Dashboard/index.html';
+          }
         }
       } else {
         alert('Invalid credentials. Please try again.');
@@ -50,4 +58,3 @@ document.addEventListener('DOMContentLoaded', function () {
     emailError.textContent = '';
   });
 });
-
