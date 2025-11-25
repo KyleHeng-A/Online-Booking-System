@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const result = await response.text();
         alert(result);
         if (result.includes('successful')) {
-          window.location.href = 'C:\\Users\\Heng Kyle\\OneDrive - TUS MM\\Agile\\Online-Booking-System\\Student Dashboard\\StudentDashboard.html';
+          window.location.href = '../Student Dashboard/StudentDashboard.html';
         }
       } else {
         alert('Invalid credentials. Please try again.');
