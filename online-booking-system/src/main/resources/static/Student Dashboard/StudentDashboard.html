@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Booking System</title>
+    <link rel="stylesheet" href="Style.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">Student Dashboard</div>
+        <div class="profile">
+            <span>Welcome, Student</span>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Main Content -->
+        <main class="content">
+            <!-- Upcoming Bookings -->
+            <section class="upcoming-bookings">
+                <h2>Upcoming Bookings</h2>
+                <ul id="bookingList"></ul>
+            </section>
+
+            <!-- Quick Actions -->
+            <section class="quick-actions">
+                <h2>Quick Actions</h2>
+                <button class="book-btn" id="openBookingForm">Book a Facility</button>
+            </section>
+
+            <!-- Booking Modal -->
+            <div class="modal" id="bookingModal">
+                <div class="modal-content">
+                    <span class="close" id="closeModal">&times;</span>
+                    <h2>Book a Facility</h2>
+                    <form id="bookingForm">
+                        <label for="facility">Facility:</label>
+                        <select id="facility" required></select>
+                        <p id="facilityLocation" class="location-info"></p>
+
+                        <label for="date">Date:</label>
+                        <input type="date" id="date" required>
+
+                        <label for="startTime">Start Time:</label>
+                        <select id="startTime" required></select>
+
+                        <label for="endTime">End Time:</label>
+                        <select id="endTime" required></select>
+
+                        <button type="submit">Confirm Booking</button>
+                    </form>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Online Booking System</p>
+    </footer>
+
+    <script src="StudentDashboard.js"></script>
+</body>
+
+</html>

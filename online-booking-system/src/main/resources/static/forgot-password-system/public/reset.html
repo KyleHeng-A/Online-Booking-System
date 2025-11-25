@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Reset Password</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+
+
+
+<body>
+  <main class="container" role="main">
+    <h1 id="rp-title">Reset your password</h1>
+    <p class="subtitle">Create a new password to secure your account.</p>
+
+    <form aria-labelledby="rp-title" novalidate>
+      <div class="form-row">
+        <label for="new-password">New Password</label>
+        <div class="input-with-toggle">
+          <input id="new-password" name="new-password" type="password" autocomplete="new-password"
+                 placeholder="Enter a strong password" aria-required="true" aria-invalid="false" />
+          <span class="toggle-eye" aria-hidden="true">👁</span>
+        </div>
+        <div class="help">Requirements: ≥ 8 characters, at least 1 special character.</div>
+        <div id="newpass-error" class="error" aria-live="polite"></div>
+      </div>
+
+      <div class="form-row">
+        <label for="confirm-password">Confirm New Password</label>
+        <div class="input-with-toggle">
+          <input id="confirm-password" name="confirm-password" type="password" autocomplete="new-password"
+                 placeholder="Re-enter the password" aria-required="true" aria-invalid="false" />
+          <span class="toggle-eye" aria-hidden="true">👁</span>
+        </div>
+        <div id="confpass-error" class="error" aria-live="polite"></div>
+      </div>
+
+      <button type="button" class="btn" aria-label="Reset password">Reset Password</button>
+
+      <div id="rp-msg" class="success" aria-live="polite" style="margin-top:8px"></div>
+
+      <div class="hr"></div>
+      <p class="help">This link may expire after a period or first use.</p>
+    </form>
+  </main>
+
+  <script src="script.js"></script>
+
+</body>
+</html>

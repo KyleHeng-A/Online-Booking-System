@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Booking Requests</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="admin.css">
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header class="topbar">
+    <h1>Booking Requests</h1>
+    <p class="subtitle">Approve or reject booking submissions</p>
+  </header>
+
+  <div class="content">
+
+    <div id="global-message" class="alert" aria-live="polite"></div>
+
+    <section class="panel">
+      <h2>Pending & Processed Bookings</h2>
+
+      <table>
+        <thead>
+          <tr>
+            <th>User</th>
+            <th>Time</th>
+            <th>Resource</th>
+            <th>Status</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+
+        <tbody id="booking-table-body"></tbody>
+      </table>
+
+    </section>
+
+    <a href="index.html" class="btn-primary" style="background:#6b7280;">⬅ Back to Dashboard</a>
+
+  </div>
+
+  <script src="admin.js"></script>
+
+</body>
+</html>
